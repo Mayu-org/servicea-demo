@@ -27,7 +27,7 @@ jobs:
     - name: Build with Maven
       run: |
         ls -l
-        cd servicea-demo
+        cd my-spring-boot-app
         mvn clean package
 
     - name: Log in to Docker Hub
