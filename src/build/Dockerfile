@@ -8,8 +8,7 @@ WORKDIR /app
 COPY target/my-spring-boot-app-0.0.1-SNAPSHOT.jar app.jar
 
 # Define the version of the OpenTelemetry Java Agent you want to download
-ENV OTEL_AGENT_VERSION=1.30.0  # Update this to the desired version
-
+ENV OTEL_AGENT_VERSION=1.30.0
 # Download the OpenTelemetry Java Agent
 RUN apt-get update && apt-get install -y curl && \
     curl -L -o opentelemetry-javaagent.jar https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v$OTEL_AGENT_VERSION/opentelemetry-javaagent.jar && \
